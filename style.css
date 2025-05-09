@@ -103,10 +103,10 @@ body {
 
 .section-content {
   width: 100%;
-  max-width: min(90vw, 800px); /* ปรับขนาดตามหน้าจอแต่ไม่เกิน 800px */
+  max-width: min(90vw, 800px); /* ปรับขนาดไม่เกิน 800px */
   background: #282828;
   border: 5px solid #ff6f3c;
-  border-radius: clamp(20px, 4vw, 35px); /* ปรับขนาดตามหน้าจอ */
+  border-radius: clamp(20px, 4vw, 35px); /* ปรับขนาด */
   box-shadow: 0 14px 42px rgba(0,0,0,0.17);
   padding: clamp(1.5rem, 4vw, 4.5rem) clamp(0.5rem, 2vw, 2rem) clamp(1rem, 3vw, 3rem);
   text-align: center;
@@ -132,7 +132,7 @@ body {
     width: 100%;
     max-width: min(90vw, 600px); /* ลดขนาด */
     padding: 2rem;
-    box-sizing: border-box; /* สำคัญมาก */  
+    box-sizing: border-box; 
     position: relative;
     box-shadow:
       0 0 10px rgba(255, 111, 60, 0.4),
@@ -207,7 +207,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.5rem, 0.5vw, 0rem); /* ปรับขนาดตามหน้าจอ */
+  gap: clamp(0.5rem, 0.5vw, 0rem); /* ปรับขนาด */
 }
 .big-label {
   font-size: clamp(1.1em, 2.4vw, 1.3em);
@@ -218,10 +218,10 @@ body {
 .big-input {
   font-size: clamp(0.85em, 2vw, 1.1em);
   padding: clamp(0.6em, 1vw, 1em) clamp(0.8em, 1.5vw, 1.5em);
-  border-radius: clamp(12px, 2vw, 20px); /* ปรับขนาดตามหน้าจอ */
+  border-radius: clamp(12px, 2vw, 20px); /* ปรับขนาด*/
   border: 2.5px solid #a4a3a3;
   outline: none;
-  max-width: min(95%, 370px); /* ปรับขนาดตามหน้าจอแต่ไม่เกิน 370px */
+  max-width: min(95%, 370px); /* ปรับขนาดม่เกิน 370px */
   color: #232323;
   background: #fff;
   font-family: inherit;
@@ -241,7 +241,7 @@ body {
   font-size: clamp(0.85em, 2vw, 1.1em);
   font-family: inherit;
   padding: clamp(0.7em, 1vw, 1em) clamp(2em, 3vw, 3.5em);
-  border-radius: clamp(12px, 2vw, 18px); /* ปรับขนาดตามหน้าจอ */
+  border-radius: clamp(12px, 2vw, 18px); /* ปรับขนาด */
   border: none;
   color: #fff;
   background: #ec612e;
@@ -312,8 +312,8 @@ to   {
 .modal-close {
 position: absolute;
 top: clamp(10px, 2vw, 24px); /* ปรับขนาดตามหน้าจอ */
-right: clamp(15px, 3vw, 30px); /* ปรับขนาดตามหน้าจอ */
-font-size: clamp(1.8em, 3vw, 2.7em); /* ปรับขนาดตามหน้าจอ */
+right: clamp(15px, 3vw, 30px); 
+font-size: clamp(1.8em, 3vw, 2.7em); 
 line-height: 1;
 color: #ff6f3c;
 font-weight: bold;
@@ -381,4 +381,62 @@ font-weight: bold;
 #spin-button:hover {
 background-color: #27ae60;
 }
+/* Responsive  */
+@media (max-width: 700px) {
+  .navbar { padding: 1rem 4vw; }
+  .section-title1 { font-size: 1.8rem; }
+  .new-list { font-size: 0.85rem; }
+  .main-section { padding-top: 1vw; padding-bottom: 2vw; }
+}
 
+@media (max-width: 600px) {
+  .section-content { max-width: 95vw; padding: 1rem; font-size: 0.9rem; }
+  .section-title, .section-title1 { font-size: 1.4rem; }
+  .new-list { font-size: 0.8rem; }
+  .big-input, .big-btn { font-size: 0.9rem; }
+  .section-content { max-width: 95vw; padding: 1rem; font-size: 0.9rem; } 
+
+  
+}
+
+@media (max-width: 500px) {
+  .nav-menu { gap: 0.3rem; }
+  .nav-menu a { padding: 0.5rem 0.7rem; font-size: 0.9em; }
+  .section-title1 { font-size: 1.3rem; }
+  .new-list { font-size: 0.75rem; }
+  .modal-box { padding: 1.2em 0.8em; }
+}
+  
+@media (max-width: 460px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .nav-logo {
+    margin-bottom: 0.5rem;
+    font-size: 1.7rem;
+  }
+
+  .nav-menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar { flex-direction: column; padding: 0.7rem 1vw 1rem; }
+  .nav-logo { margin-bottom: 0.7rem; }
+  .nav-menu { width: 100%; justify-content: space-around; }
+  .section-title1 { font-size: 1.2rem ; } 
+  
+  .new-list { font-size: 0.7rem; }
+}

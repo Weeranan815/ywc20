@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>- YWC20 -</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+  
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">  
+      <img src="capp.PNG" alt="Logo" class="logo" sizes="10px">
+      YWC<span></span><span>20</span></div>
+    <ul class="nav-menu">
+      <li><a href="#" class="active" id="nav-home">หน้าแรก</a></li>
+      <li><a href="#" id="nav-check">ตรวจสอบผล</a></li>
+      <li><a href="#" id="nav-wheel">ที่เบาใจ</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-section active" id="section-home">
+    <div class="section-content1">
+      <div class="announcement-box">
+        <h1 class="section-title1">ประกาศผลการสมัครค่าย Young Webmaster Camp ครั้งที่ 20</h1>
+        <ul class="news-list">
+          <li>📣📢 <strong>ประกาศผลผู้มีสิทธิ์สัมภาษณ์เข้าร่วม ค่าย Young Webmaster Camp 20 📢📣</strong></li>
+          <li style="text-align: center">สามารถตรวจสอบผลการสมัครได้ที่หน้า  
+            <a id="sec-check" href="#" onclick="showSection('sec-check')">"ตรวจสอบผล" 🎉</a></li>
+          <li> 📍 วันสัมภาษณ์ 11 พฤษภาคม 2568<br>
+              ⏰ ตั้งแต่เวลา 09.00 - 17.00 น.<br>
+              🏢 สถานที่: Cleverse ชั้น 13 อาคารรุ่งโรจน์ธนกุล  
+              <a target="_blank" href="https://maps.app.goo.gl/AZz5RBbymGey11ND7" style="color: blue;"> > ดูแผนที่</a>
+          </li>
+          <li>📰 ติดตาม Facebook Fanpage:
+            <a target="_blank" href="https://www.facebook.com/ywcth/" style="color: orangered;">"Young Webmaster Camp"</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-section" id="section-check">
+    <div class="section-content">
+      <div class="section-title" ><strong style="color: rgb(240, 213, 242);">ประกาศผลการสมัครค่าย</strong></div>
+      <form id="checkForm" autocomplete="off">
+        <div class="input-wrap">
+          <div>
+            <label class="big-label" for="input-fname">ชื่อ</label>
+            <input class="big-input" id="input-fname" name="fname" placeholder="กรอกชื่อ" autocomplete="off">
+          </div>
+          <div>
+            <label class="big-label" for="input-lname">นามสกุล</label>
+            <input class="big-input" id="input-lname" name="lname" placeholder="กรอกนามสกุล" autocomplete="off">
+          </div>
+          <div>
+            <label class="big-label" for="input-id">เลขประจำตัว</label>
+            <input class="big-input" id="input-id" name="refid" placeholder="ตัวอย่าง PG01" autocomplete="off" maxlength="8">
+          </div>
+        </div>
+        <button type="submit" class="big-btn">ตรวจสอบผล</button>
+      </form>
+    </div>
+  </div>
+
+  
+
+  <div class="main-section" id="section-wheel">
+    <div class="section-content">
+      <div class="section-title"> อธิษฐานก่อนกด 🎡</div>
+      <div id="wheel-container">
+        <div id="wheel">
+          <div class="segment"><span>ติด</span></div>
+          <div class="segment"><span>ไม่ติด</span></div>
+          <div class="segment"><span>ติด</span></div>
+          <div class="segment"><span>ไม่ติด</span></div>
+          <div class="segment"><span>ติด</span></div>
+          <div class="segment"><span>ไม่ติด</span></div>
+          <div class="segment"><span>ติด</span></div>
+          <div class="segment"><span>ติด</span></div>
+        </div>
+        <button id="spin-button">Spin</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal-box" id="modal-box">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
